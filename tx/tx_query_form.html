@@ -1,1 +1,17 @@
+<head>    
+    <!-- This links your css file to the html -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <!-- This will show up on the tab in your browser -->
+    <title>Transaction Query Form</title>    
+</head> 
+<div class="container">
+  <form action="action_page.php">
 
+    <label for="txID">Transaction ID</label>
+    <input type="text" id="txID" name="transactionID" placeholder="Enter ID.." maxlength="16" pattern="/TX/[0-9]" required>
+
+    <input type="submit" value="Find">
+
+  </form>
+</div> 
