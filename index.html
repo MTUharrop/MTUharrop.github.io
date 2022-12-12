@@ -33,4 +33,38 @@
     <div class="projects">
         <h1>Projects</h1>
     </div>
+    
+    <?php
+
+        /* The Sign-In client object - reference: https://developers.google.com/identity/sign-in/web/session-state. */
+        var auth2;
+
+        /** Initializes the Sign-In client. */
+        var initClient = function() {
+            gapi.load('auth2', function(){
+                /* Retrieve the singleton for the GoogleAuth library and set up the client. */
+                auth2 = gapi.auth2.init({
+                    client_id: 'CLIENT_ID.apps.googleusercontent.com'
+                });
+
+                // Attach the click handler to the sign-in button
+                auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
+            });
+        };
+
+        /* Handle successful sign-ins. */
+        var onSuccess = function(user) {
+            console.log('Signed in as ' + user.getBasicProfile().getName());
+        };
+
+        /* Handle sign-in failures.*/
+        var onFailure = function(error) {
+            console.log(error);
+        };
+
+        // Set session variables
+        $_SESSION["userID"] = https://www.googleapis.com/oauth2/v2/userinfo?access_token="YOUR_ACCESS_TOKEN";
+        $_SESSION["favanimal"] = "cat";
+    ?>
+    
 </body>
