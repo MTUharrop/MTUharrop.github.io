@@ -1,17 +1,18 @@
-<head>    
-    <!-- This links your css file to the html -->
-    <link rel="stylesheet" type="text/css" href="index.css">
+<!DOCTYPE HTML>
+<html>
+    <head>    
+        <!-- This links your css file to the html -->
+        <link rel="stylesheet" type="text/css" href="index.css">
     
-    <!-- This will show up on the tab in your browser -->
-    <title>Transaction Query Form</title>    
-</head> 
-<div class="container">
-  <form action="tx_query.php" method="get">
+        <!-- This will show up on the tab in your browser -->
+        <title>Transaction Query Form</title>    
+    </head> 
+    <body>
+        <form action="tx_query.php" method="POST">
+            <label for="txID">Transaction ID</label>
+            <input type="text" id="txID" name="transactionID" placeholder="Enter ID.." maxlength="16" required>
 
-    <label for="txID">Transaction ID</label>
-    <input type="text" id="txID" name="transactionID" placeholder="Enter ID.." maxlength="16" required>
-
-    <input type="submit" value="Find">
-
-  </form>
-</div> 
+            <input type="submit" value="Find">
+        </form>
+    </body>
+</html>
